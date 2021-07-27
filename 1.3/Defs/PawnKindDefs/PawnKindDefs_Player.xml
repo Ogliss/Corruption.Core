@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <PawnKindDef ParentName="BaseImperialPlayerPawnKind">
+	<defName>Colonist_IoM</defName>
+	<initialWillRange>0~0</initialWillRange>
+	<initialResistanceRange>13~21</initialResistanceRange>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="BaseChaosPlayerPawnKind" Class="Corruption.Core.CorruptionPawnKindDef">
+	<defName>Colonist_Chaos</defName>
+	<initialWillRange>0~0</initialWillRange>
+	<initialResistanceRange>13~21</initialResistanceRange>
+  </PawnKindDef>
+
+</Defs>

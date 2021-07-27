@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+
+  <Operation Class="PatchOperationSequence">
+    <operations>
+      <li Class="PatchOperationConditional">
+        <xpath>*/ThingDef[defName="Human"]/inspectorTabs</xpath>
+        <nomatch Class="PatchOperationAdd">
+          <xpath>*/ThingDef[defName="Human"]</xpath>
+          <value>
+            <inspectorTabs>
+            </inspectorTabs>
+          </value>
+        </nomatch>
+      </li>
+      <li Class="PatchOperationConditional">
+        <xpath>*/ThingDef[defName="Human"]/inspectorTabs/li[text()="Corruption.Core.Soul.ITab_Pawn_Soul"]</xpath>
+        <nomatch Class="PatchOperationAdd">
+			<xpath>*/ThingDef[defName="Human"]/inspectorTabs</xpath>
+			<value>
+			  <li>Corruption.Core.Soul.ITab_Pawn_Soul</li>
+			</value>
+        </nomatch>
+      </li>
+    </operations>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>*/ThingDef[defName="Human"]/recipes</xpath>
+    <value>
+      <li>Exorcism</li>
+    </value>
+  </Operation>
+	
+  <!--Operation Class="PatchOperationSequence">
+    <operations>
+      <li Class="PatchOperationConditional">
+        <xpath>*/ThingDef[defName="Human"]/comps</xpath>
+        <nomatch Class="PatchOperationAdd">
+          <xpath>*/ThingDef[defName="Human"]</xpath>
+          <value>
+            <comps>
+            </comps>
+          </value>
+        </nomatch>
+      </li>
+      <li Class="PatchOperationConditional">
+        <xpath>*/ThingDef[defName="Human"]/comps/li[compClass="Corruption.Core.Soul.CompSoul"]</xpath>
+        <nomatch Class="PatchOperationAdd">
+			<xpath>*/ThingDef[defName="Human"]/comps</xpath>
+			<value>
+			  <li>
+				<compClass>Corruption.Core.Soul.CompSoul</compClass>
+			  </li>
+			</value>
+        </nomatch>
+      </li>
+    </operations>
+  </Operation-->
+  
+	
+</Patch>
+

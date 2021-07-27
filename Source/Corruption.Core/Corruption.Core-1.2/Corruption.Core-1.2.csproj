@@ -1,0 +1,276 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9C951F5A-68F8-458C-994B-1E2A52849496}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Corruption.Core</RootNamespace>
+    <AssemblyName>Corruption.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFramework>net472</TargetFramework>
+    <FileAlignment>512</FileAlignment>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Output\Assemblies\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FactionColors">
+      <HintPath>..\..\..\Assemblies\FactionColors.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Abilities\AbilityUI.cs" />
+    <Compile Include="Abilities\Ability_AoE.cs" />
+    <Compile Include="Abilities\CompAbilityEffect_AffectSettlementRelation.cs" />
+    <Compile Include="Abilities\CompAbilityEffect_Recruit.cs" />
+    <Compile Include="Abilities\IAbilityLearner.cs" />
+    <Compile Include="Abilities\LearnableAbility.cs" />
+    <Compile Include="Abilities\CompAbilityEffect_AroundPsyker.cs" />
+    <Compile Include="Abilities\CompAbilityEffect_DirectDamage.cs" />
+    <Compile Include="Abilities\CompAbilityEffect_GiveHediffSeverity.cs" />
+    <Compile Include="Abilities\CompAbilityEffect_GiveThought.cs" />
+    <Compile Include="Abilities\CompAbilityEffect_Growth.cs" />
+    <Compile Include="Abilities\CompAbilityEffect_LightningStrike.cs" />
+    <Compile Include="Abilities\CompAbilityEffect_Mutate.cs" />
+    <Compile Include="Abilities\CompAbilityEffect_PsyProjectile.cs" />
+    <Compile Include="Abilities\CompAbilityEffect_ReplacePart.cs" />
+    <Compile Include="Abilities\CompAbilityEffect_SatisfyNeed.cs" />
+    <Compile Include="Abilities\CompAbilityEffect_SpawnBeam.cs" />
+    <Compile Include="Abilities\CompAbilityEffect_SpawnPawn.cs" />
+    <Compile Include="Abilities\CompAbilityEffect_SpawnRadial.cs" />
+    <Compile Include="Abilities\CompAbilityEffect_SpawnVortex.cs" />
+    <Compile Include="Abilities\CompAbilityEffect_StunAdvanced.cs" />
+    <Compile Include="Abilities\CompAbilityEffect_Teleport.cs" />
+    <Compile Include="Abilities\CompDamageOnSpawn.cs" />
+    <Compile Include="Abilities\CompProperties_AbilityEffectWithDurationAdvanced.cs" />
+    <Compile Include="Abilities\InfernoBeam.cs" />
+    <Compile Include="Abilities\Thought_MemoryPsionic.cs" />
+    <Compile Include="Abilities\Window_TraitAbilities.cs" />
+    <Compile Include="AfflictionProperty.cs" />
+    <Compile Include="Abilities\CompAbilityEffect_AreaOfEffect.cs" />
+    <Compile Include="Abilities\CompAbilityEffect_GiveMentalStateTargeted.cs" />
+    <Compile Include="Abilities\CompAbilityEffect_LaunchProjectile.cs" />
+    <Compile Include="CompAffectSoil.cs" />
+    <Compile Include="CompDamageLInker.cs" />
+    <Compile Include="CompNotSpawnable.cs" />
+    <Compile Include="CompNurgleRevivable.cs" />
+    <Compile Include="CompSpawnTurret.cs" />
+    <Compile Include="CoreConceptDefOf.cs" />
+    <Compile Include="CoreSoundDefOf.cs" />
+    <Compile Include="CorruptionPawnKindDef.cs" />
+    <Compile Include="CorruptionStoryTracker.cs" />
+    <Compile Include="CorruptionStoryTrackerComponent.cs" />
+    <Compile Include="CorruptionStoryTrackerUtilities.cs" />
+    <Compile Include="CorruptionTraitDefOf.cs" />
+    <Compile Include="DamageDefOf.cs" />
+    <Compile Include="DamageWorker_Mutate.cs" />
+    <Compile Include="FactionsDefOf.cs" />
+    <Compile Include="FastGetCompsExtensions.cs" />
+    <Compile Include="GenDrawExtension.cs" />
+    <Compile Include="Gods\Dialog_SetReligion.cs" />
+    <Compile Include="Gods\God.cs" />
+    <Compile Include="Gods\GodDef.cs" />
+    <Compile Include="Gods\GodDefOf.cs" />
+    <Compile Include="Gods\GodFavourWorker.cs" />
+    <Compile Include="Gods\PantheonAttributeDef.cs" />
+    <Compile Include="Gods\PantheonDef.cs" />
+    <Compile Include="Gods\PantheonDefOf.cs" />
+    <Compile Include="HarmonyPatches.cs" />
+    <Compile Include="HediffComp_AffectSkin.cs" />
+    <Compile Include="HediffComp_DamageEquipment.cs" />
+    <Compile Include="HediffComp_DemonicAttention.cs" />
+    <Compile Include="HediffComp_DemonicPossession.cs" />
+    <Compile Include="HediffComp_DrawExtra.cs" />
+    <Compile Include="HediffComp_GainCorruption.cs" />
+    <Compile Include="HediffComp_GiveTrait.cs" />
+    <Compile Include="HediffComps_Nurgle.cs" />
+    <Compile Include="HediffComp_Heal.cs" />
+    <Compile Include="HediffComp_MoteThrower.cs" />
+    <Compile Include="HediffComp_Mutate.cs" />
+    <Compile Include="HediffComp_ReplacePart.cs" />
+    <Compile Include="HediffDefOf.cs" />
+    <Compile Include="HediffDemonicAttention.cs" />
+    <Compile Include="Items\CompEmpyreal.cs" />
+    <Compile Include="Items\PowerBeamConfigurable.cs" />
+    <Compile Include="Items\Projectile_Trail.cs" />
+    <Compile Include="ModSettings_Corruption.cs" />
+    <Compile Include="MoteAttachedText.cs" />
+    <Compile Include="MotePulse.cs" />
+    <Compile Include="Patches\ToilPatches.cs" />
+    <Compile Include="PlaceWorker_Hidden.cs" />
+    <Compile Include="Plant_Nurgle.cs" />
+    <Compile Include="Plant_RareTicker.cs" />
+    <Compile Include="PossessionUtiltiy.cs" />
+    <Compile Include="RecipeWorker_Exorcise.cs" />
+    <Compile Include="Soul\JobDriver_Pray.cs" />
+    <Compile Include="MainTabWindow_CorruptionCore.cs" />
+    <Compile Include="MutationUtility.cs" />
+    <Compile Include="Gods\Pawn_PrayerTracker.cs" />
+    <Compile Include="Gods\PrayerDef.cs" />
+    <Compile Include="Soul\Pawn_ChosenTracker.cs" />
+    <Compile Include="Soul\SoulAfflictionDef.cs" />
+    <Compile Include="Soul\SoulTraitDefOf.cs" />
+    <Compile Include="Soul\WorktagFavour.cs" />
+    <Compile Include="TEXUI_Core.cs" />
+    <Compile Include="ThingDefOf.cs" />
+    <Compile Include="ThoughtWorker_PsychicBlank.cs" />
+    <Compile Include="ThoughtWorker_Tzeentchian.cs" />
+    <Compile Include="PawnRecentMemoryCorruption.cs" />
+    <Compile Include="ScenPart_ChaosColony.cs" />
+    <Compile Include="ScenPart_NextToHostile.cs" />
+    <Compile Include="Soul\ITab_Pawn_Soul.cs" />
+    <Compile Include="Soul\CompSoul.cs" />
+    <Compile Include="Soul\SoulAffliction.cs" />
+    <Compile Include="Soul\SoulCardUtility.cs" />
+    <Compile Include="Soul\SoulExtensions.cs" />
+    <Compile Include="Soul\SoulPredisposition.cs" />
+    <Compile Include="Soul\SoulTraitDef.cs" />
+    <Compile Include="Soul\SoulUtility.cs" />
+    <Compile Include="Soul\Soul_WorshipTracker.cs" />
+    <Compile Include="FavorProgress.cs" />
+    <Compile Include="Soul\GodsFavourLevel.cs" />
+    <Compile Include="ThoughtWorker_NurgleGifts.cs" />
+    <Compile Include="Thought_MemoryBloodlust.cs" />
+    <Compile Include="Thought_PleasesSlaanesh.cs" />
+    <Compile Include="TraitMentalStateGiver_Slaaneshi.cs" />
+    <Compile Include="Vortex.cs" />
+    <Compile Include="WeakSettlementComp.cs" />
+    <Compile Include="WidgetExtensions.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Books\" />
+    <Folder Include="Output\Assemblies\" />
+    <Folder Include="Output\Defs\Bodies\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Output\Defs\GodDefs\GodDefs.xml" />
+    <None Include="Output\Defs\GodDefs\PantheonDefs.xml" />
+    <None Include="Output\Patches\Pawn_Patches.xml" />
+    <None Include="Output\Languages\English\Strings\NameBanks\BattlePrefix.txt" />
+    <None Include="Output\Languages\English\Strings\NameBanks\EldarNames.txt" />
+    <None Include="Output\Languages\English\Strings\NameBanks\EldarNick.txt" />
+    <None Include="Output\Languages\English\Strings\NameBanks\OrkNames.txt" />
+    <None Include="Output\Languages\English\Strings\NameBanks\OrkPref.txt" />
+    <None Include="Output\Languages\English\Strings\NameBanks\OrkSuff.txt" />
+    <None Include="Output\Languages\English\Strings\NameBanks\ShipNames_Generic.txt" />
+    <None Include="Output\Languages\English\Strings\NameBanks\SororitasFix.txt" />
+    <None Include="Output\Languages\English\Strings\NameBanks\SororitasName.txt" />
+    <None Include="Output\Languages\English\Strings\NameBanks\TauAunEl.txt" />
+    <None Include="Output\Languages\English\Strings\NameBanks\TauPorUi.txt" />
+    <None Include="Output\Languages\English\Strings\NameBanks\TauShasLa.txt" />
+    <None Include="Output\Languages\English\Strings\NameBanks\TauShasSuff.txt" />
+    <None Include="Output\Languages\English\Strings\NameBanks\TauShasUi.txt" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Output\Defs\TraitDefs\Traits_Singular.xml" />
+    <None Include="Output\Defs\TraitDefs\Traits_Spectrum.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Output\Defs\ApparelLayerDef\ApparelLayers.xml" />
+    <Content Include="Output\Defs\DamageDefs\DamageDefs.xml" />
+    <Content Include="Output\Defs\EffecterDefs\Effecters.xml" />
+    <Content Include="Output\Defs\FactionDefs\Factions_Hidden.xml" />
+    <Content Include="Output\Defs\FactionDefs\Factions_Player.xml" />
+    <Content Include="Output\Defs\GodDefs\PantheonAttributes.xml" />
+    <Content Include="Output\Defs\GodDefs\Xenos.xml" />
+    <Content Include="Output\Defs\HediffDefs\GenericHediffs.xml" />
+    <Content Include="Output\Defs\HediffDefs\GodHediffs.xml" />
+    <Content Include="Output\Defs\HediffDefs\MutationHediffDefs.xml" />
+    <Content Include="Output\Defs\HediffDefs\PossesssionHediffs.xml" />
+    <Content Include="Output\Defs\JoyGiverDefs\JoyGiversPray.xml" />
+    <Content Include="Output\Defs\Misc\SoulAfflictions.xml" />
+    <Content Include="Output\Defs\PawnKindDefs\PawnKindDefs.xml" />
+    <Content Include="Output\Defs\PawnKindDefs\PawnKindDefs_Cult.xml" />
+    <Content Include="Output\Defs\PawnKindDefs\PawnKindDefs_IoM.xml" />
+    <Content Include="Output\Defs\PrayerDefs\CorruptionPrayers.xml" />
+    <Content Include="Output\Defs\PrayerDefs\EmperorPrayers.xml" />
+    <Content Include="Output\Defs\PrayerDefs\XenoPrayers.xml" />
+    <Content Include="Output\Defs\RecipeDefs\Recipes_Possession.xml" />
+    <Content Include="Output\Defs\RecipeDefs\Recipes_SynthBinder.xml" />
+    <Content Include="Output\Defs\Scenarios\Secnarios_Special.xml" />
+    <Content Include="Output\Defs\SoundDefs\CoreSounds.xml" />
+    <Content Include="Output\Defs\StuffCategoryDefs\StuffCategories.xml" />
+    <Content Include="Output\Defs\ThingCategoryDefs\ThingCategories.xml" />
+    <Content Include="Output\Defs\ThingDefs\Apparel.xml" />
+    <Content Include="Output\Defs\ThingDefs\Buildings_Structure.xml" />
+    <Content Include="Output\Defs\ThingDefs\Ethereal_Skyfallers.xml" />
+    <Content Include="Output\Defs\ThingDefs\Items.xml" />
+    <Content Include="Output\Defs\ThingDefs\Items_Artifacts.xml" />
+    <Content Include="Output\Defs\ThingDefs\MeleeWeapons_Demonic.xml" />
+    <Content Include="Output\Defs\ThingDefs\Motes.xml" />
+    <Content Include="Output\Defs\ThingDefs\Races_Demonkind.xml" />
+    <Content Include="Output\Defs\ThingDefs\Resources.xml" />
+    <Content Include="Output\Defs\ThoughtDefs\Thoughts_Chaos.xml" />
+    <Content Include="Output\Defs\Tutor\Concepts.xml" />
+    <Content Include="Output\Languages\English\Keyed\Gods.xml" />
+    <Content Include="Output\Languages\English\Keyed\Soul.xml" />
+    <Content Include="Output\Patches\AlienFactionPatches.xml" />
+    <Content Include="Output\Patches\JobPatches.xml" />
+    <Content Include="Output\Patches\ThoughtPatches.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Krafs.Rimworld.Ref" Version="1.2.2905" />
+    <PackageReference Include="Lib.Harmony" Version="2.0.4" />
+    <PackageReference Include="TaskPubliciser">
+      <Version>1.0.3</Version>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  <Target Name="MyCode" BeforeTargets="UpdateReferences">
+    <PropertyGroup>
+      <AssemblyCSharp>$(PkgKrafs_Rimworld_Ref)\ref\net472\Assembly-CSharp.dll</AssemblyCSharp>
+      <PubliciseOutputPath>$(PkgKrafs_Rimworld_Ref)\ref\net472\</PubliciseOutputPath>
+      <AssemblyCSharp_Publicised>$(PubliciseOutputPath)Assembly-CSharp_publicised.dll</AssemblyCSharp_Publicised>
+    </PropertyGroup>
+    <Publicise TargetAssemblyPath="$(AssemblyCSharp)" OutputPath="$(PubliciseOutputPath)" Condition="Exists('$(AssemblyCSharp)')" />
+    <ItemGroup>
+      <Reference Include="$(AssemblyCSharp_Publicised)">
+        <SpecificVersion>false</SpecificVersion>
+        <HintPath>$(AssemblyCSharp_Publicised)</HintPath>
+        <Implicit>true</Implicit>
+        <Private>false</Private>
+      </Reference>
+    </ItemGroup>
+  </Target>
+  <Target Name="UpdateReferences" AfterTargets="ResolveLockFileReferences">
+    <ItemGroup>
+      <Reference Remove="$(PkgKrafs_Rimworld_Ref)\ref\net472\Assembly-CSharp.dll" />
+    </ItemGroup>
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>robocopy "$(ProjectDir)\Corruption.Core" "C:\Program Files (x86)\Steam\steamapps\common\RimWorld1.2\Mods\Corruption.Core" /MIR /xd .git Source Ideology 1.3 /xf "*.zip" "*.7z" "*.psd" "*.psb" "*.md" ".gitattributes" ".gitignore" "About.xml" "LoadFolders.xml" "LICENSE"</PostBuildEvent>
+  </PropertyGroup>
+</Project>

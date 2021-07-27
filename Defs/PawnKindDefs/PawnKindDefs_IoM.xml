@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  
+  <PawnKindDef ParentName="BaseImperialCitizenPawnKind">
+    <defName>IoM_Citizen</defName>
+	
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="BaseImperialTraderPawnKind">
+    <defName>IoM_Trader</defName>
+	
+  </PawnKindDef>
+
+</Defs>

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <DamageDef ParentName="Laser">
+    <defName>Laser</defName>
+    <explosionCellMote>Mote_BlastFlame</explosionCellMote>
+  </DamageDef>
+  
+  <DamageDef ParentName="RottenBurst">
+    <defName>RottenBurst</defName>
+    <explosionCellMote>Mote_BlastDry</explosionCellMote>
+  </DamageDef>
+  
+  <DamageDef Name="MutatingBurn" ParentName="MutatingBurnBase" Class="Corruption.Core.DamageDefMutation">
+    <defName>MutatingBurn</defName>
+    <explosionCellMote>Mote_BlastFlame</explosionCellMote>
+  </DamageDef>
+  
+</Defs>

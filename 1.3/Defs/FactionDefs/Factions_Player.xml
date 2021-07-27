@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <FactionDef ParentName="PlayerFactionBase_IoM">
+    <defName>PlayerColony_IoM</defName>
+    <allowedCultures>
+		<!--li>Astropolitan_IoM</li-->
+		<li>Astropolitan</li>
+	</allowedCultures>
+  </FactionDef>
+
+  <FactionDef ParentName="PlayerFactionBase_Chaos">
+    <defName>PlayerColony_Chaos</defName>
+    <allowedCultures>
+		<!--li>Kriminul_Chaos</li-->
+		<li>Kriminul</li>
+	</allowedCultures>
+  </FactionDef>
+  
+</Defs>

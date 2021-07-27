@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="MoteBase">
+    <defName>Mote_PsykerGlow</defName>
+    <graphicData>
+      <texPath>Things/Mote/FireGlow</texPath>
+      <shaderType>MoteGlow</shaderType>
+    </graphicData>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <mote>
+      <fadeInTime>0.75</fadeInTime>
+      <solidTime>1.08</solidTime>
+      <fadeOutTime>0.8</fadeOutTime>
+    </mote>
+  </ThingDef>
+  
+  <ThingDef ParentName="MoteBase">
+    <defName>Mote_PsykerFlash</defName>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <mote>
+      <solidTime>0.05</solidTime>
+      <fadeOutTime>0.1</fadeOutTime>
+    </mote>
+    <graphicData>
+      <texPath>Things/Mote/ExplosionFlash</texPath>
+      <shaderType>MoteGlow</shaderType>
+    </graphicData>
+  </ThingDef>
+  
+  <ThingDef ParentName="MoteBase">
+    <defName>Mote_Hit_Dirt</defName>
+    <graphicData>
+      <texPath>Things/Mote/ShotHit_Dirt</texPath>
+      <shaderType>Transparent</shaderType>
+    </graphicData>
+    <altitudeLayer>MoteLow</altitudeLayer>
+    <mote>
+      <solidTime>0.03</solidTime>
+      <fadeOutTime>0.1</fadeOutTime>
+    </mote>
+  </ThingDef>
+
+  <ThingDef ParentName="MoteBase">
+    <defName>Mote_BloodSplash_Psykers</defName>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <mote>
+      <solidTime>0.07</solidTime>
+      <fadeOutTime>0.08</fadeOutTime>
+    </mote>
+    <graphicData>
+      <texPath>Things/Mote/BloodSplash</texPath>
+      <shaderType>Mote</shaderType>
+    </graphicData>
+  </ThingDef>
+
+  <EffecterDef>
+    <defName>Exorcise</defName>
+    <children>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerContinuous</subEffecterClass>
+        <scale>0.5~0.7</scale>
+        <ticksBetweenMotes>180</ticksBetweenMotes>
+        <positionLerpFactor>0.0</positionLerpFactor>
+        <positionRadius>0.0</positionRadius>
+        <moteDef>Mote_HolyExorcise</moteDef>
+      </li>
+    </children>
+  </EffecterDef>
+
+  <EffecterDef>
+    <defName>SoundBlastSlaanesh</defName>
+    <children>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerContinuous</subEffecterClass>
+        <scale>0.5~0.7</scale>
+        <ticksBetweenMotes>60</ticksBetweenMotes>
+        <positionLerpFactor>0.0</positionLerpFactor>
+        <positionRadius>0.0</positionRadius>
+        <moteDef>Mote_SoundBlast</moteDef>
+      </li>
+    </children>
+  </EffecterDef>
+  
+</Defs>

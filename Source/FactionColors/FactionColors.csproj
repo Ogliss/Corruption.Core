@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DA0757DA-B2A4-403D-A6E6-E47D6D754847}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FactionColors</RootNamespace>
+    <AssemblyName>FactionColors</AssemblyName>
+    <TargetFramework>net472</TargetFramework>
+    <FileAlignment>512</FileAlignment>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\1.3\Assemblies\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="ApparelComposite.cs" />
+    <Compile Include="ApparelDetail.cs" />
+    <Compile Include="ApparelDetailDrawer.cs" />
+    <Compile Include="ApparelDetailProps.cs" />
+    <Compile Include="ApparelGraphicGetterFC.cs" />
+    <Compile Include="ApparelUniform.cs" />
+    <Compile Include="Apparel_HardShield.cs" />
+    <Compile Include="Backpack_Accessory.cs" />
+    <Compile Include="BannerType.cs" />
+    <Compile Include="Building_FactionColorChooser.cs" />
+    <Compile Include="CamouflageColorsUtility.cs" />
+    <Compile Include="CompAccessoryDrawer.cs" />
+    <Compile Include="CompFactionColor.cs" />
+    <Compile Include="CompFlagDrawer.cs" />
+    <Compile Include="CompHardShield.cs" />
+    <Compile Include="CompPauldronDrawer.cs" />
+    <Compile Include="CompProperties_AccessoryDrawer.cs" />
+    <Compile Include="CompProperties_FactionColor.cs" />
+    <Compile Include="CompProperties_FlagDrawer.cs" />
+    <Compile Include="CompProperties_HardShield.cs" />
+    <Compile Include="CompProperties_PauldronDrawer.cs" />
+    <Compile Include="CompRenderToolUserApparel.cs" />
+    <Compile Include="Deepstriker_ThingDef.cs" />
+    <Compile Include="Dialog_ChooseBanner.cs" />
+    <Compile Include="Dialog_ChooseColor.cs" />
+    <Compile Include="FactionColorEntry.cs" />
+    <Compile Include="FactionColorsTracker.cs" />
+    <Compile Include="FactionColorUtilities.cs" />
+    <Compile Include="FactionDefUniform.cs" />
+    <Compile Include="FactionItem.cs" />
+    <Compile Include="FactionItemDef.cs" />
+    <Compile Include="FactionUniform.cs" />
+    <Compile Include="FastGetCompsExtensions.cs" />
+    <Compile Include="FC_GraphicGetter.cs" />
+    <Compile Include="GraphicData_FC.cs" />
+    <Compile Include="Graphic_ApparelRandom.cs" />
+    <Compile Include="Graphic_RandomApparel.cs" />
+    <Compile Include="Graphic_RandomMulti.cs" />
+    <Compile Include="Graphic_SingleFC.cs" />
+    <Compile Include="HarmonyPatches.cs" />
+    <Compile Include="ITab_FactionColor.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <DependentUpon>Settings.settings</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ShoulderPadEntry.cs" />
+    <Compile Include="ShoulderPadType.cs" />
+    <Compile Include="Subfaction.cs" />
+    <Compile Include="TestClass.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Krafs.Rimworld.Ref" Version="1.3.3055-beta" GeneratePathProperty="true" />
+    <PackageReference Include="Lib.Harmony">
+      <Version>2.1.0</Version>
+    </PackageReference>
+    <PackageReference Include="TaskPubliciser">
+      <Version>1.0.3</Version>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+  </ItemGroup>
+  <Target Name="MyCode" BeforeTargets="UpdateReferences">
+    <PropertyGroup>
+      <AssemblyCSharp>$(PkgKrafs_Rimworld_Ref)\ref\net472\Assembly-CSharp.dll</AssemblyCSharp>
+      <PubliciseOutputPath>$(PkgKrafs_Rimworld_Ref)\ref\net472\</PubliciseOutputPath>
+      <AssemblyCSharp_Publicised>$(PubliciseOutputPath)Assembly-CSharp_publicised.dll</AssemblyCSharp_Publicised>
+    </PropertyGroup>
+    <Publicise TargetAssemblyPath="$(AssemblyCSharp)" OutputPath="$(PubliciseOutputPath)" Condition="Exists('$(AssemblyCSharp)')" />
+    <ItemGroup>
+      <Reference Include="$(AssemblyCSharp_Publicised)">
+        <SpecificVersion>false</SpecificVersion>
+        <HintPath>$(AssemblyCSharp_Publicised)</HintPath>
+        <Implicit>true</Implicit>
+        <Private>false</Private>
+      </Reference>
+    </ItemGroup>
+  </Target>
+  <Target Name="UpdateReferences" AfterTargets="ResolveLockFileReferences">
+    <ItemGroup>
+      <Reference Remove="$(PkgKrafs_Rimworld_Ref)\ref\net472\Assembly-CSharp.dll" />
+    </ItemGroup>
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+  <Corruption.Core.Gods.PantheonDef>
+    <defName>ImperialCult</defName>
+    <label>Imperial Cult</label>
+    <description>The Imperial Cult is the official and only state religion of the Imperium of Man. It is devoted to the worship of the Emperor of Mankind as the ascended divinity and saviour of humanity.</description>
+    <members>
+      <li>
+        <god>Emperor</god>
+      </li>
+    </members>
+    <approvingFactions>
+    </approvingFactions>
+    <rejectingPantheons>
+      <li>Chaos</li>
+    </rejectingPantheons>
+    <approvingGoodwill>10</approvingGoodwill>
+    <rejectingGoodwill>-20</rejectingGoodwill>
+    <pantheonAttributes>
+      <li>ImperialUnity</li>
+      <li>ImperialPilgrims</li>
+    </pantheonAttributes>
+    <iconPath>UI/Pantheons/ImperialCultIcon</iconPath>
+    <mainColor>(0.93, 0.78, 0.19)</mainColor>
+  </Corruption.Core.Gods.PantheonDef>
+
+  <Corruption.Core.Gods.PantheonDef>
+    <defName>Chaos</defName>
+    <label>Chaos</label>
+    <description>The Ruinous Powers, seeking to keep the galaxy in an unending cycle of destruction.</description>
+    <members>
+      <li>
+        <god>Khorne</god>
+      </li>
+      <li>
+        <god>Nurgle</god>
+      </li>
+      <li>
+        <god>Slaanesh</god>
+      </li>
+      <li>
+        <god>Tzeentch</god>
+      </li>
+    </members>
+    <approvingFactions>
+    </approvingFactions>
+    <rejectingPantheons>
+      <li>ImperialCult</li>
+    </rejectingPantheons>
+    <violentTakeover>true</violentTakeover>
+    <takeoverThresholds>
+      <points>
+        <li>(0.32,0.0)</li>
+        <li>(0.33,0.2)</li>
+        <li>(0.5,0.5)</li>
+        <li>(1.0,1.0)</li>
+      </points>
+    </takeoverThresholds>
+    <approvingGoodwill>10</approvingGoodwill>
+    <rejectingGoodwill>-20</rejectingGoodwill>
+    <pantheonAttributes>
+      <li>ChaosCultistMind</li>
+      <li>ChaosSpawnings</li>
+    </pantheonAttributes>
+    <iconPath>UI/Pantheons/ChaosIcon</iconPath>
+    <mainColor>(0.6, 0.0, 0.0)</mainColor>
+  </Corruption.Core.Gods.PantheonDef>
+
+
+  <Corruption.Core.Gods.PantheonDef MayRequire="Ogliss.AdMech.Xenobiologis.Eldar">
+    <defName>EldarPantheon</defName>
+    <label>Aeldar Mythology</label>
+    <description>The Aeldar Mythology is an ancient cultural force which binds the surviving members of the Aeldari race together and forms a basis for much of their thinking about their ancient past. Most of their gods have perished.</description>
+    <members>
+      <li>
+        <god>Ynnead</god>
+      </li>
+      <li>
+        <god>Khaine</god>
+      </li>
+      <li>
+        <god>Cegorach</god>
+      </li>
+    </members>
+    <approvingFactions>
+    </approvingFactions>
+    <approvingGoodwill>10</approvingGoodwill>
+    <rejectingGoodwill>-20</rejectingGoodwill>
+    <iconPath>UI/Pantheons/AeldariIcon</iconPath>
+    <mainColor>(0.32, 0.65, 0.68)</mainColor>
+    <requiresMod>Ogliss.AdMech.Xenobiologis.Eldar</requiresMod>
+    <!--<requiresMod>UNAVAILABLEMODRIGHTNOW</requiresMod>-->
+  </Corruption.Core.Gods.PantheonDef>
+
+  <Corruption.Core.Gods.PantheonDef MayRequire="Ogliss.AdMech.Xenobiologis.Orkz">
+    <defName>OrkPantheon</defName>
+    <label>Gork and Mork</label>
+    <description>Orks are single-minded in their path on destruction. Their collective psyche manifests in the warp in the form of two towering Orkish gods, locked in an eternal brawl.</description>
+    <members>
+      <li>
+        <god>Gork</god>
+      </li>
+      <li>
+        <god>Mork</god>
+      </li>
+    </members>
+    <approvingFactions>
+    </approvingFactions>
+    <approvingGoodwill>50</approvingGoodwill>
+    <rejectingGoodwill>-50</rejectingGoodwill>
+    <iconPath>UI/Pantheons/OrkIcon</iconPath>
+    <mainColor>(0.4, 0.7, 0.0)</mainColor>
+    <requiresMod>Ogliss.AdMech.Xenobiologis.Orkz</requiresMod>
+  </Corruption.Core.Gods.PantheonDef>
+
+</Defs>

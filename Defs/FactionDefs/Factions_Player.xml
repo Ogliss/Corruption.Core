@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <FactionDef ParentName="PlayerFactionBase_IoM">
+    <defName>PlayerColony_IoM</defName>
+    <hairTags>
+      <li>Urban</li>
+    </hairTags>
+  </FactionDef>
+
+  <FactionDef ParentName="PlayerFactionBase_Chaos">
+    <defName>PlayerColony_Chaos</defName>
+    <hairTags>
+      <li>Urban</li>
+    </hairTags>
+  </FactionDef>
+
+</Defs>

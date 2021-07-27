@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <PawnKindDef ParentName="CultistSlaveBase" Class="Corruption.Core.CorruptionPawnKindDef">
+    <defName>Cultist_Slave</defName>
+	
+  </PawnKindDef>
+  
+  <PawnKindDef ParentName="CultistGunnerBase" Class="Corruption.Core.CorruptionPawnKindDef">
+    <defName>Cultist_Gunner</defName>
+	
+  </PawnKindDef>
+  
+  <PawnKindDef ParentName="CultistBrawlerBase" Class="Corruption.Core.CorruptionPawnKindDef">
+    <defName>Cultist_Brawler</defName>
+	
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="CultistGuardGunnerBase" Class="Corruption.Core.CorruptionPawnKindDef">
+    <defName>Cultist_Guard_Gunner</defName>
+	
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="CultistGuardGrenadierBase" Class="Corruption.Core.CorruptionPawnKindDef">
+    <defName>Cultist_Guard_Grenadier</defName>
+	
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="CultistGuardSlasherBase" Class="Corruption.Core.CorruptionPawnKindDef">
+    <defName>Cultist_Guard_Slasher</defName>
+	
+  </PawnKindDef>
+
+</Defs>

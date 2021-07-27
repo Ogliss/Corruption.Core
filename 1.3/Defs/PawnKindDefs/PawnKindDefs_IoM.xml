@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  
+  <PawnKindDef ParentName="BaseImperialCitizenPawnKind">
+    <defName>IoM_Citizen</defName>
+	<initialWillRange>0~1</initialWillRange>
+	<initialResistanceRange>7~12</initialResistanceRange>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="BaseImperialTraderPawnKind">
+    <defName>IoM_Trader</defName>
+	<initialWillRange>0~1</initialWillRange>
+	<initialResistanceRange>7~12</initialResistanceRange>
+  </PawnKindDef>
+
+</Defs>
