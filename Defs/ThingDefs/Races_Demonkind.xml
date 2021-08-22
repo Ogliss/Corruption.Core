@@ -24,6 +24,7 @@
       <hasGenders>false</hasGenders>
       <foodType>None</foodType>
       <lifeExpectancy>2500</lifeExpectancy>
+      <wildness>10</wildness>
     </race>
     <comps>
       <li Class="CompProperties_CanBeDormant" />

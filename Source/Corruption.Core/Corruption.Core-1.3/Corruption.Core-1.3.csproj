@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{9C951F5A-68F8-458C-994B-1E2A52849496}</ProjectGuid>
+    <ProjectGuid>{0D3FA1CD-C5C8-4C42-B029-A0550A4F6C5D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Corruption.Core</RootNamespace>
@@ -20,11 +20,10 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\..\..\1.2\Assemblies\</OutputPath>
+    <OutputPath>..\..\..\1.3\Assemblies\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -35,8 +34,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <EmbeddedResource Remove="Output\**" />
+    <None Remove="Output\**" />
+  </ItemGroup>
+  <ItemGroup>
     <Reference Include="FactionColors">
-      <HintPath>..\..\..\Assemblies\FactionColors.dll</HintPath>
+      <HintPath>..\..\..\1.3\Assemblies\FactionColors.dll</HintPath>
+      <Private>false</Private>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -71,21 +75,24 @@
     <Compile Include="Abilities\CompAbilityEffect_AreaOfEffect.cs" />
     <Compile Include="Abilities\CompAbilityEffect_GiveMentalStateTargeted.cs" />
     <Compile Include="Abilities\CompAbilityEffect_LaunchProjectile.cs" />
+    <Compile Include="CoreMoteMaker.cs" />
+    <Compile Include="DefOfs\RecipeDefOf.cs" />
+    <Compile Include="Listing_StandardExtentions.cs" />
     <Compile Include="CompAffectSoil.cs" />
     <Compile Include="CompDamageLInker.cs" />
     <Compile Include="CompNotSpawnable.cs" />
     <Compile Include="CompNurgleRevivable.cs" />
     <Compile Include="CompSpawnTurret.cs" />
-    <Compile Include="CoreConceptDefOf.cs" />
-    <Compile Include="CoreSoundDefOf.cs" />
+    <Compile Include="DefOfs\CoreConceptDefOf.cs" />
+    <Compile Include="DefOfs\CoreSoundDefOf.cs" />
     <Compile Include="CorruptionPawnKindDef.cs" />
     <Compile Include="CorruptionStoryTracker.cs" />
     <Compile Include="CorruptionStoryTrackerComponent.cs" />
     <Compile Include="CorruptionStoryTrackerUtilities.cs" />
-    <Compile Include="CorruptionTraitDefOf.cs" />
-    <Compile Include="DamageDefOf.cs" />
+    <Compile Include="DefOfs\CorruptionTraitDefOf.cs" />
+    <Compile Include="DefOfs\DamageDefOf.cs" />
     <Compile Include="DamageWorker_Mutate.cs" />
-    <Compile Include="FactionsDefOf.cs" />
+    <Compile Include="DefOfs\FactionsDefOf.cs" />
     <Compile Include="FastGetCompsExtensions.cs" />
     <Compile Include="GenDrawExtension.cs" />
     <Compile Include="Gods\Dialog_SetReligion.cs" />
@@ -109,7 +116,7 @@
     <Compile Include="HediffComp_MoteThrower.cs" />
     <Compile Include="HediffComp_Mutate.cs" />
     <Compile Include="HediffComp_ReplacePart.cs" />
-    <Compile Include="HediffDefOf.cs" />
+    <Compile Include="DefOfs\HediffDefOf.cs" />
     <Compile Include="HediffDemonicAttention.cs" />
     <Compile Include="Items\CompEmpyreal.cs" />
     <Compile Include="Items\PowerBeamConfigurable.cs" />
@@ -133,7 +140,7 @@
     <Compile Include="Soul\SoulTraitDefOf.cs" />
     <Compile Include="Soul\WorktagFavour.cs" />
     <Compile Include="TEXUI_Core.cs" />
-    <Compile Include="ThingDefOf.cs" />
+    <Compile Include="DefOfs\ThingDefOf.cs" />
     <Compile Include="ThoughtWorker_PsychicBlank.cs" />
     <Compile Include="ThoughtWorker_Tzeentchian.cs" />
     <Compile Include="PawnRecentMemoryCorruption.cs" />
@@ -160,79 +167,13 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Books\" />
-    <Folder Include="Output\Assemblies\" />
-    <Folder Include="Output\Defs\Bodies\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Output\Defs\GodDefs\GodDefs.xml" />
-    <None Include="Output\Defs\GodDefs\PantheonDefs.xml" />
-    <None Include="Output\Patches\Pawn_Patches.xml" />
-    <None Include="Output\Languages\English\Strings\NameBanks\BattlePrefix.txt" />
-    <None Include="Output\Languages\English\Strings\NameBanks\EldarNames.txt" />
-    <None Include="Output\Languages\English\Strings\NameBanks\EldarNick.txt" />
-    <None Include="Output\Languages\English\Strings\NameBanks\OrkNames.txt" />
-    <None Include="Output\Languages\English\Strings\NameBanks\OrkPref.txt" />
-    <None Include="Output\Languages\English\Strings\NameBanks\OrkSuff.txt" />
-    <None Include="Output\Languages\English\Strings\NameBanks\ShipNames_Generic.txt" />
-    <None Include="Output\Languages\English\Strings\NameBanks\SororitasFix.txt" />
-    <None Include="Output\Languages\English\Strings\NameBanks\SororitasName.txt" />
-    <None Include="Output\Languages\English\Strings\NameBanks\TauAunEl.txt" />
-    <None Include="Output\Languages\English\Strings\NameBanks\TauPorUi.txt" />
-    <None Include="Output\Languages\English\Strings\NameBanks\TauShasLa.txt" />
-    <None Include="Output\Languages\English\Strings\NameBanks\TauShasSuff.txt" />
-    <None Include="Output\Languages\English\Strings\NameBanks\TauShasUi.txt" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Output\Defs\TraitDefs\Traits_Singular.xml" />
-    <None Include="Output\Defs\TraitDefs\Traits_Spectrum.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Output\Defs\ApparelLayerDef\ApparelLayers.xml" />
-    <Content Include="Output\Defs\DamageDefs\DamageDefs.xml" />
-    <Content Include="Output\Defs\EffecterDefs\Effecters.xml" />
-    <Content Include="Output\Defs\FactionDefs\Factions_Hidden.xml" />
-    <Content Include="Output\Defs\FactionDefs\Factions_Player.xml" />
-    <Content Include="Output\Defs\GodDefs\PantheonAttributes.xml" />
-    <Content Include="Output\Defs\GodDefs\Xenos.xml" />
-    <Content Include="Output\Defs\HediffDefs\GenericHediffs.xml" />
-    <Content Include="Output\Defs\HediffDefs\GodHediffs.xml" />
-    <Content Include="Output\Defs\HediffDefs\MutationHediffDefs.xml" />
-    <Content Include="Output\Defs\HediffDefs\PossesssionHediffs.xml" />
-    <Content Include="Output\Defs\JoyGiverDefs\JoyGiversPray.xml" />
-    <Content Include="Output\Defs\Misc\SoulAfflictions.xml" />
-    <Content Include="Output\Defs\PawnKindDefs\PawnKindDefs.xml" />
-    <Content Include="Output\Defs\PawnKindDefs\PawnKindDefs_Cult.xml" />
-    <Content Include="Output\Defs\PawnKindDefs\PawnKindDefs_IoM.xml" />
-    <Content Include="Output\Defs\PrayerDefs\CorruptionPrayers.xml" />
-    <Content Include="Output\Defs\PrayerDefs\EmperorPrayers.xml" />
-    <Content Include="Output\Defs\PrayerDefs\XenoPrayers.xml" />
-    <Content Include="Output\Defs\RecipeDefs\Recipes_Possession.xml" />
-    <Content Include="Output\Defs\RecipeDefs\Recipes_SynthBinder.xml" />
-    <Content Include="Output\Defs\Scenarios\Secnarios_Special.xml" />
-    <Content Include="Output\Defs\SoundDefs\CoreSounds.xml" />
-    <Content Include="Output\Defs\StuffCategoryDefs\StuffCategories.xml" />
-    <Content Include="Output\Defs\ThingCategoryDefs\ThingCategories.xml" />
-    <Content Include="Output\Defs\ThingDefs\Apparel.xml" />
-    <Content Include="Output\Defs\ThingDefs\Buildings_Structure.xml" />
-    <Content Include="Output\Defs\ThingDefs\Ethereal_Skyfallers.xml" />
-    <Content Include="Output\Defs\ThingDefs\Items.xml" />
-    <Content Include="Output\Defs\ThingDefs\Items_Artifacts.xml" />
-    <Content Include="Output\Defs\ThingDefs\MeleeWeapons_Demonic.xml" />
-    <Content Include="Output\Defs\ThingDefs\Motes.xml" />
-    <Content Include="Output\Defs\ThingDefs\Races_Demonkind.xml" />
-    <Content Include="Output\Defs\ThingDefs\Resources.xml" />
-    <Content Include="Output\Defs\ThoughtDefs\Thoughts_Chaos.xml" />
-    <Content Include="Output\Defs\Tutor\Concepts.xml" />
-    <Content Include="Output\Languages\English\Keyed\Gods.xml" />
-    <Content Include="Output\Languages\English\Keyed\Soul.xml" />
-    <Content Include="Output\Patches\AlienFactionPatches.xml" />
-    <Content Include="Output\Patches\JobPatches.xml" />
-    <Content Include="Output\Patches\ThoughtPatches.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="Krafs.Rimworld.Ref" Version="1.2.2905" />
-    <PackageReference Include="Lib.Harmony" Version="2.0.4" />
+    <PackageReference Include="Krafs.Rimworld.Ref" Version="1.3.3076" />
+    <PackageReference Include="Lib.Harmony" Version="2.1.1" />
     <PackageReference Include="TaskPubliciser">
       <Version>1.0.3</Version>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -271,18 +212,7 @@
   </Target>
   -->
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <PropertyGroup>
-    <PostBuildEvent>call "$(ProjectDir)..\Scripts\ModCopy 1.2.bat"
-call :REPORT_ERRORLEVEL
-goto :EOF
-
-:REPORT_ERRORLEVEL
-echo.
-if ERRORLEVEL 16 echo ***FATAL ERROR*** &amp; goto :EOF
-if ERRORLEVEL 8 echo **FAILED COPIES** &amp; goto :EOF
-if ERRORLEVEL 4 echo *MISMATCHES* &amp; goto :EOF
-if ERRORLEVEL 2 echo EXTRA FILES &amp; goto :EOF
-if ERRORLEVEL 1 echo Copy successful &amp; goto :EOF
-if ERRORLEVEL 0 echo –no change– &amp; goto :EOF</PostBuildEvent>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
 </Project>

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-  <Corruption.Core.Gods.GodDef  MayRequire="Ogliss.AdMech.Xenobiologis.Eldar">
+  <Corruption.Core.Gods.GodDef MayRequire="Ogliss.AdMech.Xenobiologis.Eldar">
     <defName>Ynnead</defName>
     <label>Ynnead</label>
     <description>Ynnead is the Aeldari emerging god of death, the final hope of defeating Slaanesh.</description>
@@ -25,7 +25,7 @@
     </approvesBattlingPantheon>
   </Corruption.Core.Gods.GodDef>
 
-  <Corruption.Core.Gods.GodDef  MayRequire="Ogliss.AdMech.Xenobiologis.Eldar">
+  <Corruption.Core.Gods.GodDef MayRequire="Ogliss.AdMech.Xenobiologis.Eldar">
     <defName>Cegorach</defName>
     <label>Cegorach</label>
     <description>Czegorach is the Aeldari trickster god. He has escaped the grasp of Slaanesh and has survided thus far by cunning.</description>
@@ -99,6 +99,7 @@
     <approvesBattlingPantheon>
       <li>Chaos</li>
       <li>ImperialCult</li>
+      <li>OrkPantheon</li>
       <li MayRequire="Ogliss.AdMech.Xenobiologis.Eldar">EldarPantheon</li>
     </approvesBattlingPantheon>
   </Corruption.Core.Gods.GodDef>
@@ -127,6 +128,7 @@
     <approvesBattlingPantheon>
       <li>Chaos</li>
       <li>ImperialCult</li>
+      <li>OrkPantheon</li>
       <li MayRequire="Ogliss.AdMech.Xenobiologis.Eldar">EldarPantheon</li>
     </approvesBattlingPantheon>
   </Corruption.Core.Gods.GodDef>

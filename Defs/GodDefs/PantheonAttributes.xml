@@ -18,7 +18,7 @@
     <defName>ChaosCultistMind</defName>
     <label>cultist mind</label>
     <workerClass>Corruption.Core.Gods.PantheonAttributeTickWorker_Cultist</workerClass>
-    <description>Falling for chaos your pawns slowly loose most of their empathy. They have a higher chance to gain traits that counter negative thoughts from the horrors they see.</description>
+    <description>Falling to chaos your pawns slowly loose most of their empathy. They have a higher chance to gain traits that counter negative thoughts from the horrors they see.</description>
     <iconPath>UI/Pantheons/AttributeCultists</iconPath>
   </Corruption.Core.Gods.PantheonAttributeDef>
 

@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <Corruption.Core.Gods.PrayerDef Name="KhainePrayerBase" Abstract="True" MayRequire="Ogliss.AdMech.Xenobiologis.Eldar">
+    <dedicatedTo>Khaine</dedicatedTo>    
+    <preferredWorktags>
+      <li>Violent</li>
+    </preferredWorktags>
+  </Corruption.Core.Gods.PrayerDef>
+
+  <Corruption.Core.Gods.PrayerDef Name="CegorachPrayerBase" Abstract="True" MayRequire="Ogliss.AdMech.Xenobiologis.Eldar">
+    <dedicatedTo>Cegorach</dedicatedTo>
+    <preferredWorktags>
+      <li>Violent</li>
+    </preferredWorktags>
+  </Corruption.Core.Gods.PrayerDef>
+
+  <Corruption.Core.Gods.PrayerDef Name="YnneadPrayerBase" Abstract="True" MayRequire="Ogliss.AdMech.Xenobiologis.Eldar">
+    <dedicatedTo>Ynnead</dedicatedTo>
+    <preferredWorktags>
+      <li>Violent</li>
+    </preferredWorktags>
+  </Corruption.Core.Gods.PrayerDef>
+
+  <Corruption.Core.Gods.PrayerDef ParentName="KhainePrayerBase" MayRequire="Ogliss.AdMech.Xenobiologis.Eldar">
+    <defName>Prayer_EldarBattleCryI</defName>
+    <label>Eldar Battlecry</label>
+    <prayerLines>
+      <li>Blood runs</li>
+      <li>Anger wakes</li>
+      <li>Death rises</li>
+      <li>War calls!</li>
+    </prayerLines>
+  </Corruption.Core.Gods.PrayerDef>
+
+  <Corruption.Core.Gods.PrayerDef ParentName="KhainePrayerBase" MayRequire="Ogliss.AdMech.Xenobiologis.Eldar">
+    <defName>Prayer_EldarBattleCryII</defName>
+    <label>Eldar Battlecry</label>
+    <prayerLines>
+      <li>Haras fell</li>
+      <li>Caman Roisin</li>
+      <li>Mure Ashafar</li>
+      <li>Offiga Rothe!</li>
+    </prayerLines>
+  </Corruption.Core.Gods.PrayerDef>
+
+  <Corruption.Core.Gods.PrayerDef ParentName="KhainePrayerBase" MayRequire="Ogliss.AdMech.Xenobiologis.Eldar">
+    <defName>Prayer_EldarBattleCryIII</defName>
+    <label>Eldar Battlecry</label>
+    <prayerLines>
+      <li>There is no art</li>
+      <li>More beautiful and diverse</li>
+      <li>As the art of death.</li>
+    </prayerLines>
+  </Corruption.Core.Gods.PrayerDef>
+
+  <Corruption.Core.Gods.PrayerDef ParentName="KhainePrayerBase" MayRequire="Ogliss.AdMech.Xenobiologis.Eldar">
+    <defName>Prayer_EldarBattleCryIV</defName>
+    <label>Eldar Battlecry</label>
+    <prayerLines>
+      <li>I come to dance</li>
+      <li>The Dance of Death</li>
+    </prayerLines>
+  </Corruption.Core.Gods.PrayerDef>
+
+</Defs>
