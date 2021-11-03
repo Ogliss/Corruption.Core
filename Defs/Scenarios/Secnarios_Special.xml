@@ -1,17 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-
-
   <ScenarioDef>
     <defName>40k_ImperialDomination</defName>
     <label>40K - Imperial Domination</label>
-    <description>
-      Your group is a collection of extraordinary individuals that volunteered to try and take over a planet. You start with quite a lot of technology and resources to help your mission.
-
-      The Imperial institutions will have your back if you fulfill their demands.
-
-    </description>
+    <description>\nYour group is a collection of extraordinary individuals that volunteered to try and take over a planet. You start with quite a lot of technology and resources to help your mission.\n\nThe Imperial institutions will have your back if you fulfill their demands.</description>
     <scenario>
       <name>Imperial Domination</name>
       <summary>An Imperial expedition of 6 citizens to an Imperial Frontier World.</summary>
@@ -145,11 +138,17 @@
           <thingDef>Silver</thingDef>
           <count>50</count>
         </li>
-        <li Class="ScenPart_StartingThing_Defined">
+		<li Class="ScenPart_StartingThing_Defined">
+			<def>StartingThing_Defined</def>
+			<thingDef>Heretic_Helmet</thingDef>
+			<stuff>Leather_Plain</stuff>
+			<count>2</count>
+		</li>
+        <!--li Class="ScenPart_StartingThing_Defined">
           <def>StartingThing_Defined</def>
           <thingDef>Heretic_Helmet</thingDef>
           <count>2</count>
-        </li>      
+        </li-->      
         <li Class="ScenPart_StartingThing_Defined">
           <def>StartingThing_Defined</def>
           <thingDef>MedicineHerbal</thingDef>
