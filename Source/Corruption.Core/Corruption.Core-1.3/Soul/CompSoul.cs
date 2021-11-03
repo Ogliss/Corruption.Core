@@ -147,7 +147,7 @@ namespace Corruption.Core.Soul
         public override void PostSpawnSetup(bool respawningAfterLoad)
         {
             base.PostSpawnSetup(respawningAfterLoad);
-
+            Log.Message($"Checking pawn faction and prayer tracker: [{this.Pawn.Faction}]; [{this.PrayerTracker != null}]");
             if (this.Pawn.Faction != Faction.OfPlayer)
             {
                 this.PrayerTracker.ShowPrayer = false;
