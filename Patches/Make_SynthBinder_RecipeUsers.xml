@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationSequence">
+		<operations>
+			<li Class="PatchOperationFindModID">
+				<mods>
+					<li>QX.AstraMilitarum</li>
+				</mods>
+				<match Class="PatchOperationReplace">
+					<xpath>/Defs/RecipeDef[defName="Make_IoMSynthBinder"]/recipeUsers/li[text()="TableMachining"]</xpath>
+					<value>
+						<li>ImperialFabricator</li>
+					</value>
+				</match>
+				<nomatch Class="PatchOperationFindModID">
+					<mods>
+						<li>Ogliss.AdMech.Armoury</li>
+					</mods>
+					<match Class="PatchOperationReplace">
+						<xpath>/Defs/RecipeDef[defName="Make_IoMSynthBinder"]/recipeUsers/li[text()="TableMachining"]</xpath>
+						<value>
+							<li>OGI_TableMachining</li>
+						</value>
+					</match>
+				</nomatch>
+			</li>
+		</operations>	
+	</Operation>
+	 
+</Patch>

@@ -37,6 +37,9 @@
         <count>1</count>
       </li>
     </ingredients>
+	<recipeUsers>
+		<li>TableMachining</li>
+	</recipeUsers>
     <products>
       <IG_SynthAgent>1</IG_SynthAgent>
     </products>
